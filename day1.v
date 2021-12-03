@@ -158,15 +158,14 @@ Definition v___stringlit_3 := {|
 |}.
 
 Definition v___stringlit_2 := {|
-  gvar_info := (tarray tschar 15);
+  gvar_info := (tarray tschar 14);
   gvar_init := (Init_int8 (Int.repr 100) :: Init_int8 (Int.repr 97) ::
                 Init_int8 (Int.repr 121) :: Init_int8 (Int.repr 49) ::
-                Init_int8 (Int.repr 95) :: Init_int8 (Int.repr 105) ::
-                Init_int8 (Int.repr 110) :: Init_int8 (Int.repr 112) ::
-                Init_int8 (Int.repr 117) :: Init_int8 (Int.repr 116) ::
-                Init_int8 (Int.repr 46) :: Init_int8 (Int.repr 116) ::
-                Init_int8 (Int.repr 120) :: Init_int8 (Int.repr 116) ::
-                Init_int8 (Int.repr 0) :: nil);
+                Init_int8 (Int.repr 95) :: Init_int8 (Int.repr 116) ::
+                Init_int8 (Int.repr 101) :: Init_int8 (Int.repr 115) ::
+                Init_int8 (Int.repr 116) :: Init_int8 (Int.repr 46) ::
+                Init_int8 (Int.repr 116) :: Init_int8 (Int.repr 120) ::
+                Init_int8 (Int.repr 116) :: Init_int8 (Int.repr 0) :: nil);
   gvar_readonly := true;
   gvar_volatile := false
 |}.
@@ -374,7 +373,7 @@ Definition f_main := {|
         (Evar _fopen (Tfunction
                        (Tcons (tptr tschar) (Tcons (tptr tschar) Tnil))
                        (tptr (Tstruct ___sFILE noattr)) cc_default))
-        ((Evar ___stringlit_2 (tarray tschar 15)) ::
+        ((Evar ___stringlit_2 (tarray tschar 14)) ::
          (Evar ___stringlit_1 (tarray tschar 2)) :: nil))
       (Sset _fp (Etempvar _t'1 (tptr (Tstruct ___sFILE noattr)))))
     (Ssequence

@@ -55,7 +55,7 @@ int count_increasing_windowed(unsigned *depths, int n, int window_size) {
 }
 
 int main() {
-  FILE* fp = fopen("day1_input.txt", "r");
+  FILE* fp = fopen("day1_test.txt", "r");
   unsigned* depths = malloc(sizeof(int) * 2048);
   unsigned* head = depths;
   int count = 0;
