@@ -5,6 +5,25 @@ Require Import AOC.day1.
 Instance CompSpecs : compspecs. make_compspecs prog. Defined.
 Definition Vprog : varspecs.  mk_varspecs prog. Defined.
 
+(* day1.c
+
+  unsigned count_increasing(unsigned depths[], int n) {
+    int i; unsigned count; unsigned last;
+    count = 0;
+    last = depths[0];
+    i = 1;
+    while(i < n) {
+      if (last < depths[i]) {
+        count++;
+      }
+      last = depths[i];
+      i++;
+    }
+    return count;
+  }
+
+*)
+
 (* Functional Specifications *)
 
 Fixpoint count_increasing (xs : list Z) : Z :=
